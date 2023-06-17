@@ -1,5 +1,6 @@
 package CollectionEx;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collector;
@@ -17,5 +18,9 @@ public class SortByKeys {
         students.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
         System.out.println("After sorting by Values:");
         students.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
+        System.out.println("After sorting by keys in Descending order:");
+        students.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEach(System.out::println);
+        System.out.println("After sorting by Values in Descending order:");
+        students.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach(System.out::println);
     }
 }

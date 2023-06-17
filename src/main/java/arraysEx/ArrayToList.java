@@ -16,5 +16,6 @@ public class ArrayToList {
 
         List<String> list1 = Arrays.asList(names);
         System.out.println(list1);
+
     }
 }
